@@ -3,6 +3,7 @@ package org.example;
 import io.github.bonigarcia.wdm.WebDriverManager;
 import junit.framework.TestCase;
 import junit.framework.TestSuite;
+import org.openqa.selenium.By;
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.chrome.ChromeDriver;
 import org.openqa.selenium.firefox.FirefoxDriver;
@@ -24,6 +25,8 @@ public class AppTest {
      driver.get("https://google.com");
      driver.manage().window().maximize();
    String url=  driver.getCurrentUrl();
+   driver.findElement(By.className("gLFyf")).sendKeys("testing");
+   driver.findElement(By.className("gLFyf")).submit();
      System.out.println("The URL is:"+url);
      driver.quit();
 
