@@ -40,8 +40,8 @@ public class AllCategoriesPage {
                 combinedTexts.add(text1);
             }
         }
-        for (WebElement image1 : image) {
-            String imageTitle = image1.getAttribute("title");
+        for (WebElement imagetext : image) {
+            String imageTitle = imagetext.getAttribute("title");
             combinedTexts.add(imageTitle);
         }
         for(String text:combinedTexts){
